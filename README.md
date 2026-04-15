@@ -1,59 +1,80 @@
-# StajTakipSistemi
+#  InternTrack - Staj Takip Sistemi
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+##  Proje Hakkında
 
-## Development server
+InternTrack, staj başvurularınızı tek bir ekrandan yönetmenizi sağlayan modern ve kullanıcı dostu bir web uygulamasıdır. Başvurularınızın durumunu (Beklemede, Mülakat, Kabul, Red) kolayca takip edebilir, yeni başvurular ekleyebilir, mevcutları güncelleyebilir ve silebilirsiniz. Proje, herhangi bir dış veritabanına ihtiyaç duymadan tamamen yerel tarayıcı hafızası (LocalStorage) kullanılarak geliştirilmiştir.
 
-To start a local development server, run:
+Bu proje, bir Web Geliştirme eğitim programı yönergelerine sadık kalınarak, modern JavaScript/TypeScript framework'leri kullanılarak hazırlanmıştır.
 
-```bash
-ng serve
+##  Özellikler
+
+- **Dashboard (Gösterge Paneli):** Toplam, bekleyen, mülakat aşamasındaki ve kabul edilen başvuru sayılarını anlık gösteren dinamik istatistik kartları.
+- **Tam CRUD İşlemleri:** Yeni başvuru Ekleme, Listeleme, Güncelleme ve Silme işlemleri.
+- **Veri Kalıcılığı:** LocalStorage entegrasyonu sayesinde sayfa yenilense dahi veriler kaybolmaz.
+- **Örnek Veri Yükleme:** Sistemi test edebilmek için tek tıkla varsayılan örnek başvuru verilerini (ASELSAN, HAVELSAN vb.) sisteme yükleme özelliği.
+- **Modern Tasarım:** Tailwind CSS kullanılarak oluşturulmuş, temiz ve şık arayüz.
+
+##  Kullanılan Teknolojiler
+
+- **Frontend Framework:** Angular (TypeScript)
+- **Stil & UI:** Tailwind CSS
+- **Durum / Veri Yönetimi:** LocalStorage (Angular Service mimarisi ile)
+- **Canlıya Alma:** Netlify
+
+##  Proje Yapısı (Yönerge Uyumlu)
+
+Proje mimarisi, yönergelerde istenen standartlara göre şu şekilde yapılandırılmıştır:
+
+```
+src/app/
+├── components/    # Uygulama genelinde kullanılabilen UI bileşenleri
+├── pages/         # Dashboard ve Form sayfaları (Yönlendirmeli sayfalar)
+├── interfaces/    # TypeScript arayüz ve tip tanımlamaları (StajBasvurusu vb.)
+└── services/      # LocalStorage ile haberleşen CRUD operasyon servisleri
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+##  Kurulum ve Çalıştırma (Geliştirici Ortamı)
 
-## Code scaffolding
+Projeyi bilgisayarınıza indirip çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Ön Koşullar
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Sisteminizde Node.js (v18 veya üzeri) yüklü olmalıdır.
+- Angular CLI sisteminizde global olarak kurulu olmalıdır:
 
 ```bash
-ng generate --help
+npm install -g @angular/cli
 ```
 
-## Building
+### Adımlar
 
-To build the project run:
+**1. Projeyi Klonlayın:**
 
 ```bash
-ng build
+git clone https://github.com/omer-ondr/staj-takip-sistemi.git
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+**2. Proje Dizinine Geçiş Yapın:**
 
 ```bash
-ng test
+cd staj-takip-sistemi
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+**3. Gerekli Bağımlılıkları (Dependencies) Yükleyin:**
 
 ```bash
-ng e2e
+npm install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**4. Uygulamayı Başlatın:**
 
-## Additional Resources
+```bash
+ng serve -o
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Bu komut projeyi derleyecek ve otomatik olarak tarayıcınızda `http://localhost:4200` adresinde açacaktır.
+
+##  Canlı Önizleme
+
+Projenin canlı ve kullanılabilir haline aşağıdaki bağlantıdan ulaşabilirsiniz: [Netlify Canlı Bağlantınız Buraya Eklenecek]
