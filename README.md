@@ -77,4 +77,4 @@ Bu komut projeyi derleyecek ve otomatik olarak tarayıcınızda `http://localhos
 
 ##  Canlı Önizleme
 
-Projenin canlı ve kullanılabilir haline aşağıdaki bağlantıdan ulaşabilirsiniz: [Netlify Canlı Bağlantınız Buraya Eklenecek]
+Projenin canlı ve kullanılabilir haline aşağıdaki bağlantıdan ulaşabilirsiniz: https://stajtakipsistemi.netlify.app/
